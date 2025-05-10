@@ -25,6 +25,10 @@
   --text-md: 16px;
   --text-sm: 14px;
   --text-table: 16px;
+
+  /* spacing */
+  --content-spacing: 120px;
+  --footer-spacing: 160px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -40,6 +44,9 @@
     --text-md: 16px;
     --text-sm: 14px;
     --text-table: 14px;
+
+    --content-spacing: 100px;
+    --footer-spacing: 120px;
   }
 }
 
@@ -56,5 +63,8 @@
     --text-md: 16px;
     --text-sm: 14px;
     --text-table: 12px;
+
+    --content-spacing: 80px;
+    --footer-spacing: 100px;
   }
 }
