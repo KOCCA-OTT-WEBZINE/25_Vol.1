@@ -84,7 +84,7 @@
   gap: 40px;
 }
 
-.lead-quote {
+.lead-text {
   font-size: var(--text-lead);
   font-weight: 500;
 }
@@ -105,23 +105,9 @@
 ===================== */
 .subtitle-wrap {
   position: relative;
-  margin-top: 60px;
-  margin-bottom: 16px;
+  margin-top: var(--content-spacing);
+  margin-bottom: 24px;
   word-break: keep-all;
-}
-
-@media (min-width: 768px) {
-  .subtitle-wrap {
-    margin-top: 80px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .subtitle-wrap {
-    margin-top: var(--content-spacing);
-    margin-bottom: 24px;
-  }
 }
 
 .subtitle-bar-desktop {
@@ -181,7 +167,7 @@
 .section-body {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 40px;
   font-size: var(--text-lg);
   word-break: break-word;
 }
@@ -341,24 +327,18 @@
   align-items: center;
   background-color: var(--gray100);
   color: var(--gray600);
-  margin-top: 120px;
+  margin-top: var(--footer-spacing);
 }
 
 @media (min-width: 768px) {
   .post-navigator {
     flex-direction: row;
-    margin-top: 160px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .post-navigator {
-    margin-top: var(--footer-spacing);
   }
 }
 
 .first-nav {
   width: 100%;
+  padding: 60px 40px 60px 120px;
 }
 .last-nav {
   width: 100%;
@@ -366,7 +346,7 @@
 
 .post-nav {
   width: 100%;
-  padding: 40px 20px;
+  padding: 60px 40px 60px 120px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -398,9 +378,6 @@
 }
 
 @media (min-width: 768px) {
-  .post-nav {
-    padding: 40px 40px;
-  }
 
   .post-nav.prev {
     border-right: 1px solid var(--gray300);

@@ -28,7 +28,7 @@
 
   /* spacing */
   --content-spacing: 120px;
-  --footer-spacing: 160px;
+  --footer-spacing: 240px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -45,8 +45,7 @@
     --text-sm: 14px;
     --text-table: 14px;
 
-    --content-spacing: 100px;
-    --footer-spacing: 120px;
+    --content-spacing: 120px;
   }
 }
 
@@ -65,6 +64,5 @@
     --text-table: 12px;
 
     --content-spacing: 80px;
-    --footer-spacing: 100px;
   }
 }

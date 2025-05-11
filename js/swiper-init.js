@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       theme: "작지만 큰 세상, 숏폼을 만드는 사람들과 만나다!",
       item: "케이프스플래닛, 유일한 대표/PD<br>SBS '문명특급' 홍민지 PD",
       img: "./img/manuscript7/banner.png",
-      imgMobile: "./img/manuscript7/banner-m.png",  
+      imgMobile: "./img/manuscript7/banner-m.png",
     },
     {
       sectionName: "트렌드 하이라이트",
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  // === 메인 배너 슬라이드 렌더링 ===
   const swiperWrapper = document.getElementById("swiper-slides");
-
   contents.forEach((content) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
@@ -46,24 +46,67 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="banner-bg mobile-bg" style="background-image: url('${content.imgMobile || content.img}');"></div>
         <div class="overlay"></div>
         <div class="content">
-          <div class="label">${content.sectionName}</div>
-          ${content.theme ? `<p class="theme">${content.theme}</p>` : ""}
+          <div class="theme-wrapper">
+            <div class="label">${content.sectionName}</div>
+            ${content.theme ? `<p class="theme">${content.theme}</p>` : ""}
+          </div>
           <p class="item">${content.item}</p>
         </div>
       </div>
     `;
-
     swiperWrapper.appendChild(slide);
   });
 
   new Swiper(".main-banner-swiper", {
     loop: true,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: { delay: 5000 },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".main-banner-swiper .swiper-pagination",
       clickable: true,
     },
+  });
+
+  const swiperStates = {
+    spotlight: null,
+    global: null,
+    people: null,
+    trend: null,
+    data: null,
+  };
+
+  // === Swiper 초기화/해제 함수 ===
+  function toggleSwiper(key, selector, nextEl, prevEl) {
+    const isMobile = window.innerWidth < 1024;
+    const initialized = !!swiperStates[key];
+
+    if (isMobile && !initialized) {
+      swiperStates[key] = new Swiper(selector, {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        grabCursor: true,
+        navigation: {
+          nextEl,
+          prevEl,
+        },
+      });
+    } else if (!isMobile && initialized) {
+      swiperStates[key].destroy(true, true);
+      swiperStates[key] = null;
+    }
+  }
+
+  // === 전체 Swiper 초기화 실행 함수 ===
+  function initAllSwipers() {
+    toggleSwiper("spotlight", ".spotlight-swiper", ".spotlight-button-next", ".spotlight-button-prev");
+    toggleSwiper("global", ".global-swiper", ".global-button-next", ".global-button-prev");
+    toggleSwiper("people", ".people-swiper", ".people-button-next", ".people-button-prev");
+    toggleSwiper("trend", ".trend-swiper", ".trend-button-next", ".trend-button-prev");
+    toggleSwiper("data", ".data-swiper", ".data-button-next", ".data-button-prev");
+  }
+
+  // 최초 실행 및 리사이즈 대응
+  initAllSwipers();
+  window.addEventListener("resize", () => {
+    setTimeout(initAllSwipers, 100);
   });
 });
