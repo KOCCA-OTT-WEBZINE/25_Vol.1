@@ -64,7 +64,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
 
 .logo-wrap,
 .logo {
-  height: 40px;
+  height: 46px;
 }
 
 .nav-right {
@@ -110,6 +110,13 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   height: 2px;
   width: 100%;
   background-color: white;
+}
+
+@media (max-width: 1440px) {
+  .logo-wrap,
+  .logo {
+    height: 40px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -235,19 +242,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
    Section Common
 ===================== */
 .section {
-  padding: var(--content-spacing) 40px;
-}
-
-@media (max-width: 1280px) {
-  .section {
-    padding: 80px 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 20px;
-  }
+  width: 100%;
 }
 
 .section#spotlight {
@@ -263,6 +258,19 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   max-width: 1640px;
   margin: 0 auto;
   width: 100%;
+  padding: var(--content-spacing) 40px;
+}
+
+@media (max-width: 1280px) {
+  .section-container {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 20px;
+  }
 }
 
 .section-title-wrap {
