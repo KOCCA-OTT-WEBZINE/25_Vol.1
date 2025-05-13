@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
               : "";
             return `
                 <li class="section-item">
-                  <a href="./${path}/${key}.html" class="menu-link">
+                  <a href="./${path}_${Number(key) + 1}.html" class="menu-link">
                     <p>${stripFootnotesAndTags(item.title)}</p>
                     ${author}
                   </a>
