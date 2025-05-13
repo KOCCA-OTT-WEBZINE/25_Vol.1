@@ -383,8 +383,8 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   min-width: 83.3%;
   max-width: 100%;
   border-radius: 12px;
-  overflow: hidden;
   border: 4px solid transparent;
+  overflow: hidden;
   text-decoration: none;
   color: white;
   transition: all 0.3s ease;
@@ -407,8 +407,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
 .people-item:hover,
 .trend-item:hover,
 .data-item:hover {
-  border-color: var(--brand100);
-  transform: scale(1.01);
+  border: 4px solid var(--brand100);
 }
 
 .item-bg {
@@ -426,7 +425,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
 .people-item:hover .item-bg,
 .trend-item:hover .item-bg,
 .data-item:hover .item-bg {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .item-overlay {
