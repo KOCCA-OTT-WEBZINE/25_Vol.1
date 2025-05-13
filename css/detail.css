@@ -120,8 +120,66 @@
   .main-content {
     padding: 0 20px;
   }
-
 }
+
+
+/* =====================
+   Video
+===================== */
+.video-frame {
+  aspect-ratio: 16 / 9;
+  margin-top:var(--content-spacing)
+  height: 100%;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1280px) {
+  .video-frame {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .video-frame {
+    margin-top: 60px;
+  }
+}
+
+/* =====================
+   Interview
+===================== */
+.interview-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: var(--text-lg);
+  word-break: break-all;
+  text-align: justify;
+}
+
+.interview-summary {
+  text-align: justify;
+  font-size: var(--text-lead);
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.interview-qna {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  line-height: 1.8;
+}
+
+.interview-q {
+  font-size: var(--text-lead);
+  font-weight: 600;
+}
+
 
 /* =====================
    SubTitle Styles
