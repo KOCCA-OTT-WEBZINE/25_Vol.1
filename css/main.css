@@ -278,6 +278,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   align-items: flex-end;
   gap: 24px;
   margin-bottom: 28px;
+  margin-left:4px;
 }
 
 .section-title-wrap#data-subject-wrap {
@@ -293,13 +294,13 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
 }
 
 #data-subject {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: 600;
 }
 
 @media (max-width: 640px) {
   #data-subject {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -584,6 +585,10 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   font-weight: 600;
 }
 
+.footer-info > .footer-info-group:nth-child(2) > div > p {
+  width: 58px;
+}
+
 .footer-buttons {
   display: flex;
   flex-direction: row;
@@ -692,6 +697,10 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   .footer-info > div:nth-child(1).footer-info-group > div > p:first-child {
     min-width: 52px;
   }
+
+  .footer-info > .footer-info-group:nth-child(2) > div > p {
+  width: 52px;
+}
 
   .footer-button-outline,
   .footer-button-filled {
