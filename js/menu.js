@@ -72,7 +72,7 @@ const contentMap = [
   { label: "글로벌 마켓 리포트", path: "global", items: globalItem },
   { label: "피플 인사이트", path: "people", items: peopleItem },
   { label: "트렌드 하이라이트", path: "trend", items: trendItem },
-  { label: "데이터 포인트", path: "dataPoint", items: dataPointItem },
+  { label: "데이터 포인트", path: "data", items: dataPointItem },
 ];
 
 // 메뉴 열기 및 렌더링

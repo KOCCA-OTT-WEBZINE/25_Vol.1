@@ -67,6 +67,10 @@
   word-break: keep-all;
 }
 
+.banner-theme {
+  text-align: center;
+}
+
 .lead-section {
   padding: 60px 0;
   background-color: var(--gray100);
@@ -93,6 +97,7 @@
 .lead-author {
   text-align: right;
   font-size: var(--text-lg);
+  word-break: keep-all;
 }
 
 .main-content {
@@ -121,6 +126,63 @@
   .main-content {
     padding: 0 20px;
   }
+}
+
+/* =====================
+   Datapoint Lead Section
+===================== */
+.datapoint-lead-wrapper {
+  padding: 40px 20px;
+  background-color: var(--gray100);
+  line-height: 1.8;
+}
+
+.datapoint-lead-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.datapoint-lead-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: justify;
+  word-break: break-all;
+  font-size: var(--text-lead);
+}
+
+.datapoint-lead-label {
+  font-weight: 600;
+  background-color: var(--brand100);
+  color: white;
+  width: fit-content;
+  padding: 0 16px;
+}
+
+.datapoint-lead-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.datapoint-lead-content {
+  font-weight: 500;
+  width: 100%
+}
+
+.datapoint-lead-content > div {
+  display: flex;
+}
+
+.datapoint-lead-content > div > p:first-child {
+  width: 32px;
+}
+.datapoint-lead-content > div > p:last-child {
+  width: fit-content;
 }
 
 
