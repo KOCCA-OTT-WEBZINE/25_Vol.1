@@ -69,6 +69,7 @@
 
 .banner-theme {
   text-align: center;
+  word-break: keep-all
 }
 
 .lead-section {
@@ -437,7 +438,7 @@
 }
 
 .table-caption {
-  font-size: 12px;
+  font-size: var(--text-md);
   text-align: left;
 }
 
@@ -453,6 +454,10 @@
   .responsive-table th,
   .responsive-table td {
     padding: 4px;
+  }
+
+  .table-caption {
+    font-size: 12px;
   }
 }
 
