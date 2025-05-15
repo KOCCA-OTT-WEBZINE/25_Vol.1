@@ -336,6 +336,7 @@
 }
 
 .added-text {
+  font-size: var(--text-md);
   color: var(--gray400);
 }
 
@@ -455,6 +456,25 @@
   }
 }
 
+@media (max-width: 640px) {
+  .table-wrap {
+    gap: 12px;
+  }
+
+  .table-scroll {
+    font-size:12px;
+  }
+
+  .table-title {
+    font-size: 14px;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 4px;
+  }
+}
+
 /* =====================
    Reference List
 ===================== */
@@ -499,10 +519,6 @@
 
   .reference-items {
     font-size: var(--text-sm);
-  }
-
-  .table-scroll {
-    font-size:12px;
   }
 }
 
