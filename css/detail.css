@@ -191,7 +191,7 @@
 ===================== */
 .video-frame {
   aspect-ratio: 16 / 9;
-  margin-top:var(--content-spacing)
+  margin-top:var(--content-spacing);
   height: 100%;
 }
 
